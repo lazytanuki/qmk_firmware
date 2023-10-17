@@ -15,6 +15,9 @@
   "diode_direction": "ROW2COL",
   "processor": "atmega32u4",
   "bootloader": "caterina",
+  "tapping": {
+    "hold_on_other_key_press": true
+  },
   "layouts": {
     "LAYOUT": {
       "layout": [
