@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ),
     [_COLEMAK_MOD1] = LAYOUT(
         QK_BOOT,             LSFT(KC_TAB),  KC_LBRC,    KC_RBRC,       KC_TRNS,         LALT(KC_TAB),      LALT(KC_RIGHT), KC_PGUP,             KC_UP,      KC_PGDN,       OSL(10),      KC_SCROLL_LOCK,
-        KC_TRNS,             KC_TAB,        KC_LPRN,    KC_RPRN,       KC_ENT,          KC_MS_BTN2,        LALT(KC_LEFT),  KC_LEFT,             KC_DOWN,    KC_RGHT,       TO(_COLEMAK), TO(_AZERTY),
+        KC_TRNS,             KC_TAB,        KC_LPRN,    KC_RPRN,       KC_ENT,          KC_APPLICATION,    LALT(KC_LEFT),  KC_LEFT,             KC_DOWN,    KC_RGHT,       TO(_COLEMAK), TO(_AZERTY),
         KC_NO,               KC_CAPS,       KC_LCBR,    KC_RCBR,       KC_TRNS,         KC_TRNS,           KC_DEL,         KC_HOME,             KC_END,     KC_MNXT,       KC_VOLU,      KC_MUTE,
         KC_TRNS,             KC_TRNS,       KC_TRNS,    KC_TRNS,       KC_TRNS,         KC_TRNS,           KC_BSPC,        KC_DEL,              KC_TRNS,    KC_MPRV,       KC_VOLD,      KC_MPLY
         ),
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ),
     [_AZERTY_MOD1] = LAYOUT(
         QK_BOOT,             LSFT(KC_TAB),  RALT(KC_5), RALT(KC_MINS), KC_TRNS,         LALT(KC_TAB),      KC_NO,          KC_PGUP,             KC_UP,      KC_PGDN,       OSL(10),      KC_SCROLL_LOCK,
-        KC_TRNS,             KC_TAB,        KC_5,       KC_MINS,       KC_ENT,          KC_MS_BTN2,        KC_NO,          KC_LEFT,             KC_DOWN,    KC_RGHT,       TO(_COLEMAK), TO(_AZERTY),
+        KC_TRNS,             KC_TAB,        KC_5,       KC_MINS,       KC_ENT,          KC_APPLICATION,    KC_NO,          KC_LEFT,             KC_DOWN,    KC_RGHT,       TO(_COLEMAK), TO(_AZERTY),
         KC_TRNS,             KC_CAPS,       RALT(KC_4), RALT(KC_EQL),  KC_TRNS,         KC_TRNS,           KC_DEL,         KC_HOME,             KC_END,     KC_MNXT,       KC_VOLU,      KC_MUTE,
         KC_TRNS,             KC_TRNS,       KC_TRNS,    KC_TRNS,       KC_TRNS,         KC_TRNS,           KC_BSPC,        KC_DEL,              KC_TRNS,    KC_MPRV,       KC_VOLD,      KC_MPLY
         ),
