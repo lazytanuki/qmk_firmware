@@ -1,6 +1,7 @@
 // Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include "keycodes.h"
 #include QMK_KEYBOARD_H
 
 #define _COLEMAK 0
@@ -17,12 +18,21 @@
 #define _FN 11
 #define _QWERTY 12
 
+// Tap Dance declarations
+enum {
+    TD_LSFT_LALT = 0
+};
+
+tap_dance_action_t tap_dance_actions[] = {
+    [TD_LSFT_LALT] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_LALT)
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_COLEMAK] = LAYOUT(
         KC_TAB,              KC_Q,          KC_W,       KC_F,          KC_P,            KC_B,              KC_J,           KC_L,                KC_U,       KC_Y,          KC_SCLN,      KC_LBRC,
         LCTL_T(KC_ESC),      KC_A,          KC_R,       KC_S,          KC_T,            KC_G,              KC_K,           KC_N,                KC_E,       KC_I,          KC_O,         KC_QUOT,
         KC_LSFT,             KC_Z,          KC_X,       KC_C,          KC_D,            KC_V,              KC_M,           KC_H,                KC_COMM,    KC_DOT,        KC_SLSH,      KC_ENT,
-        MO(_COLEMAK_NUMPAD), KC_LCTL,       KC_LALT,    KC_LGUI,       KC_LSFT,         MO(_COLEMAK_MOD1), KC_SPC,         KC_RALT,             KC_RCTL,    KC_PGUP,       KC_PGDN,      MO(_COLEMAK_SYMBOLS)
+        MO(_COLEMAK_NUMPAD), KC_LCTL,       KC_LALT,    KC_LGUI,       TD(TD_LSFT_LALT),         MO(_COLEMAK_MOD1), KC_SPC,         KC_RALT,             KC_RCTL,    KC_PGUP,       KC_PGDN,      MO(_COLEMAK_SYMBOLS)
         ),
     [_COLEMAK_MOD1] = LAYOUT(
         QK_BOOT,             LSFT(KC_TAB),  KC_LBRC,    KC_RBRC,       KC_TRNS,         LALT(KC_TAB),      LALT(KC_RIGHT), KC_PGUP,             KC_UP,      KC_PGDN,       OSL(10),      KC_SCROLL_LOCK,
