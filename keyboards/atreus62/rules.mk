@@ -1,8 +1,8 @@
 # Build Options
 #   change yes to no to disable
 #
-MCU = atmega32u4
-BOOTLOADER = atmel-dfu
+# MCU = atmega32u4
+# BOOTLOADER = atmel-dfu
 BOOTMAGIC_ENABLE = yes      # Enable Bootmagic Lite
 MOUSEKEY_ENABLE = yes       # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
